@@ -76,7 +76,7 @@ namespace MaintenanceAPI.Repository
                                        ,0)",
                                            new { RegistrationID = userRegistration, Username = username, Password = password, Email = email });
 
-                    var registrationUrl = string.Format("{0}{1}{2}", m_BaseUrl, "/User/UserValidation/", userRegistration.ToString());
+                    var registrationUrl = string.Format("{0}{1}{2}", m_BaseUrl, "User/UserValidation/", userRegistration.ToString());
                     var emailBody = string.Format("Welcome! Please register your account by clicking on this link: {0}", registrationUrl);
 
                     reply.Success = EmailHelper.SendEmail(email, "Stander Maintenance Registration", emailBody);

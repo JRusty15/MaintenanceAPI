@@ -36,7 +36,7 @@ namespace MaintenanceAPI.Controllers
             return m_UserRep.UserRegistration(regInput.Username, regInput.Password, regInput.Email);
         }
 
-        [HttpPost]
+        [HttpGet]
         [AllowAnonymous]
         [Route("UserValidation/{registrationID}")]
         public bool UserValidation(Guid registrationID)
